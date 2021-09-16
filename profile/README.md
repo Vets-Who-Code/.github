@@ -1,10 +1,10 @@
 
 # VetsWhoCode
 
+![Logo](https://res.cloudinary.com/vetswhocode/image/upload/v1627489569/flag_ohssvk.gif)
+
 #VetsWhoCode is a veteran-led and operated 501(c)(3) charitable non-profit that focuses on training veterans in programming and open source development with the purpose of starting careers in the technology industry.
 
-
-![Logo](https://res.cloudinary.com/vetswhocode/image/upload/v1627489569/flag_ohssvk.gif)
 
     
 ## 🚀 About
