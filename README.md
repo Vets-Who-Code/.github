@@ -1,2 +1,2 @@
-# .gitub
+# .github
 Vets Who Code
