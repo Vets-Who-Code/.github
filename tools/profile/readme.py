@@ -26,7 +26,8 @@ def brief(stats):
     links = "".join(linked(url, img(f"{name}.svg", label, f"{100 / len(LINKS):g}%")) for name, label, url in LINKS)
     cards = [linked(url, img(f"op-{i + 1}.svg", f"OP: {title}. {desc}", "50%")) for i, (title, desc, _, url) in enumerate(ops(stats))]
     reports = [linked(url, img(f"report-{i + 1}.svg", f"{title} ({source})", "50%")) for i, (title, source, url) in enumerate(REPORTS)]
-    record = (f"{stats['repos_public']:,} public repos, {stats['stars']:,} stars, "
+    record = (f"{stats['repos_public']:,} public repos, {stats['stars']:,} stars, {stats['forks']:,} forks, "
+              f"{stats['prs_merged']:,} PRs merged, {stats['contributors']:,} contributors, "
               f"{stats['contributions_all_time']:,} commits in the last 52 weeks") if org else (
               f"{stats['followers']:,} followers, {stats['stars']:,} stars, "
               f"{stats['prs_merged']:,} PRs merged, {stats['contributions_all_time']:,} contributions")
@@ -53,7 +54,7 @@ def brief(stats):
     if REPORTS:
         rows += [img("reports.svg", "Field reports"), *pairs(reports)]
     rows += [
-        img("footer.svg", f"{BRIEF['motto']} End of brief."),
+        img("footer.svg", f"{BRIEF['motto'].replace(' ★', ',').rstrip('.')}. End of brief."),
         # ponytail: 30.95 + 38.1 + 30.95 = 100; sides are 260/840, the 320px GIF row is 240 tall
         img("footer-left.svg", "", "30.95%") + img("vwc.gif", "Vets Who Code", "38.1%")
         + img("footer-right.svg", "", "30.95%"),

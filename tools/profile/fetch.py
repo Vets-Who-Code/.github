@@ -85,7 +85,7 @@ def rest(path):
     req = urllib.request.Request(f"https://api.github.com/{path}",
                                  headers={"Authorization": f"bearer {TOKEN}", "User-Agent": "hashflagify"})
     with urllib.request.urlopen(req, timeout=60) as resp:
-        return resp.status, json.load(resp)
+        return resp.status, json.loads(resp.read() or "null")  # 204 (empty repo) has no body
 
 
 def fetch_org():
@@ -94,6 +94,9 @@ def fetch_org():
     # ponytail: one page of 100 repos; paginate if the org passes 100 public repos
     repos = [r for r in rest(f"orgs/{LOGIN}/repos?type=sources&per_page=100")[1] if not r["private"]]
     cutoff = (datetime.now(timezone.utc) - timedelta(days=372)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # ponytail: first 100 contributors per repo; paginate if a repo passes 100
+    people = {c["login"] for r in repos for c in rest(f"repos/{LOGIN}/{r['name']}/contributors?per_page=100")[1] or []
+              if c.get("type") == "User"}
     return {
         "login": o["login"],
         "name": o["name"],
@@ -101,6 +104,8 @@ def fetch_org():
         "repos_public": o["public_repos"],
         "stars": sum(r["stargazers_count"] for r in repos),
         "forks": sum(r["forks_count"] for r in repos),
+        "contributors": len(people),
+        "prs_merged": rest(f"search/issues?q=org:{LOGIN}+is:pr+is:merged&per_page=1")[1]["total_count"],
         "active_repos": sorted(r["name"] for r in repos if not r["archived"] and r["pushed_at"] > cutoff),
     }
 

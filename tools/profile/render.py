@@ -203,13 +203,33 @@ def header():
     return slice_svg(h, body, css, top=True)
 
 
+def motto(s, y, size=20):
+    """Centered typewriter line. The fonts have no star glyph, so each "★" is drawn as a red star."""
+    if "★" not in s:
+        return text(W / 2, y, s, "type", size, SILVER, ' text-anchor="middle"')
+    parts, star, gap = [p.strip() for p in s.split("★")], size * 0.8, size * 0.6
+    widths = [sum(advances("type", p, size)) for p in parts]
+    x = (W - sum(widths) - (len(parts) - 1) * (star + 2 * gap)) / 2
+    out = ""
+    for i, (p, w) in enumerate(zip(parts, widths)):
+        out += text(x, y, p, "type", size, SILVER)
+        x += w
+        if i < len(parts) - 1:
+            cx, cy, r = x + gap + star / 2, y - size * 0.32, star / 2
+            pts = " ".join(f"{cx + (r if k % 2 == 0 else r * 0.4) * math.sin(k * math.pi / 5):.1f},"
+                           f"{cy - (r if k % 2 == 0 else r * 0.4) * math.cos(k * math.pi / 5):.1f}" for k in range(10))
+            out += f'<polygon points="{pts}" fill="{RED}"/>'
+            x += star + 2 * gap
+    return out
+
+
 def footer():
     """The GIF is its own <img> (GIFs inside an SVG <img> don't reliably animate), so the
     footer is four pieces: text, a navy slice either side of the 320x240 GIF, and the end."""
     gw, side = 320, (W - 320) // 2
     frame = f'fill="{WHITE}"'
     top = f"""<path d="M{RAIL + 40} 40H{W - RAIL - 40}" stroke="{RED}" stroke-width="2"/>
-{text(W / 2, 84, BRIEF["motto"], "type", 20, SILVER, ' text-anchor="middle"')}
+{motto(BRIEF["motto"], 84)}
 {text(W / 2, 130, "END OF BRIEF", "stencil", 30, WHITE, ' text-anchor="middle" letter-spacing="4"')}
 <rect x="{side - 8}" y="152" width="{gw + 16}" height="8" {frame}/>"""
     return {
@@ -276,9 +296,9 @@ def record(stats):
         (f"{stats['repos_public']:,}", "PUBLIC", "REPOS"),
         (f"{stats['stars']:,}", "TOTAL", "STARS"),
         (f"{stats['forks']:,}", "TOTAL", "FORKS"),
+        (f"{stats['prs_merged']:,}", "PRS", "MERGED"),
+        (f"{stats['contributors']:,}", "CONTRIBUTORS", ""),
         (f"{stats['contributions_all_time']:,}", "COMMITS", "LAST 52 WEEKS"),
-        (f"{stats['streak_current']:,}", "CURRENT", "STREAK"),
-        (f"{stats['streak_longest']:,}", "LONGEST", "STREAK"),
     ] if ORG else [
         (f"{stats['followers']:,}", "FOLLOWERS", ""),
         (f"{stats['stars']:,}", "TOTAL", "STARS"),
