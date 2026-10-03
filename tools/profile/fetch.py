@@ -106,7 +106,9 @@ def fetch_org():
         "forks": sum(r["forks_count"] for r in repos),
         "contributors": len(people),
         "prs_merged": rest(f"search/issues?q=org:{LOGIN}+is:pr+is:merged&per_page=1")[1]["total_count"],
-        "active_repos": sorted(r["name"] for r in repos if not r["archived"] and r["pushed_at"] > cutoff),
+        # .github is excluded: its commits are this workflow's daily refreshes, not the org's work.
+        "active_repos": sorted(r["name"] for r in repos
+                               if not r["archived"] and r["pushed_at"] > cutoff and r["name"] != ".github"),
     }
 
 
