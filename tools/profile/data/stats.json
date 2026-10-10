@@ -370,7 +370,8 @@
   "2026-10-06": 0,
   "2026-10-07": 0,
   "2026-10-08": 14,
-  "2026-10-09": 0
+  "2026-10-09": 0,
+  "2026-10-10": 0
  },
  "contributions_all_time": 350,
  "contributions_this_year": 313,
@@ -424,7 +425,7 @@
    "forks": 46,
    "languages": [],
    "name": "api-list",
-   "stars": 206,
+   "stars": 205,
    "url": "https://github.com/Vets-Who-Code/api-list"
   },
   {
@@ -438,7 +439,7 @@
  ],
  "prs_merged": 1159,
  "repos_public": 56,
- "stars": 885,
- "streak_current": 1,
+ "stars": 884,
+ "streak_current": 0,
  "streak_longest": 12
 }
