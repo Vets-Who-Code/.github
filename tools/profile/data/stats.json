@@ -8,13 +8,6 @@
   "vetswhocode-vs-code-theme"
  ],
  "contributions": {
-  "2025-10-12": 0,
-  "2025-10-13": 0,
-  "2025-10-14": 0,
-  "2025-10-15": 0,
-  "2025-10-16": 0,
-  "2025-10-17": 0,
-  "2025-10-18": 0,
   "2025-10-19": 0,
   "2025-10-20": 0,
   "2025-10-21": 0,
@@ -371,10 +364,11 @@
   "2026-10-07": 0,
   "2026-10-08": 14,
   "2026-10-09": 0,
-  "2026-10-10": 0
+  "2026-10-10": 3,
+  "2026-10-11": 0
  },
- "contributions_all_time": 350,
- "contributions_this_year": 313,
+ "contributions_all_time": 353,
+ "contributions_this_year": 316,
  "contributors": 84,
  "created_at": "2016-04-08T14:15:12Z",
  "forks": 229,
@@ -437,9 +431,9 @@
    "url": "https://github.com/Vets-Who-Code/vetswhocode-vs-code-theme"
   }
  ],
- "prs_merged": 1159,
+ "prs_merged": 1162,
  "repos_public": 56,
  "stars": 884,
- "streak_current": 0,
+ "streak_current": 1,
  "streak_longest": 12
 }
