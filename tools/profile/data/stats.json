@@ -365,7 +365,8 @@
   "2026-10-22": 0,
   "2026-10-23": 0,
   "2026-10-24": 0,
-  "2026-10-25": 0
+  "2026-10-25": 0,
+  "2026-10-26": 0
  },
  "contributions_all_time": 412,
  "contributions_this_year": 380,
@@ -411,7 +412,7 @@
    "forks": 34,
    "languages": [],
    "name": "windows-dev-guide",
-   "stars": 412,
+   "stars": 411,
    "url": "https://github.com/Vets-Who-Code/windows-dev-guide"
   },
   {
@@ -433,7 +434,7 @@
  ],
  "prs_merged": 1193,
  "repos_public": 56,
- "stars": 884,
+ "stars": 883,
  "streak_current": 0,
  "streak_longest": 12
 }
