@@ -367,10 +367,11 @@
   "2026-10-24": 0,
   "2026-10-25": 0,
   "2026-10-26": 0,
-  "2026-10-27": 0
+  "2026-10-27": 6,
+  "2026-10-28": 0
  },
- "contributions_all_time": 412,
- "contributions_this_year": 380,
+ "contributions_all_time": 418,
+ "contributions_this_year": 386,
  "contributors": 84,
  "created_at": "2016-04-08T14:15:12Z",
  "forks": 231,
@@ -386,7 +387,7 @@
     "JavaScript"
    ],
    "name": "vets-who-code-app",
-   "stars": 57,
+   "stars": 56,
    "url": "https://github.com/Vets-Who-Code/vets-who-code-app"
   },
   {
@@ -433,9 +434,9 @@
    "url": "https://github.com/Vets-Who-Code/vetswhocode-vs-code-theme"
   }
  ],
- "prs_merged": 1193,
+ "prs_merged": 1199,
  "repos_public": 56,
- "stars": 884,
- "streak_current": 0,
+ "stars": 883,
+ "streak_current": 1,
  "streak_longest": 12
 }
