@@ -365,10 +365,11 @@
   "2026-10-29": 0,
   "2026-10-30": 0,
   "2026-10-31": 0,
-  "2026-11-01": 0
+  "2026-11-01": 2,
+  "2026-11-02": 0
  },
- "contributions_all_time": 418,
- "contributions_this_year": 386,
+ "contributions_all_time": 420,
+ "contributions_this_year": 388,
  "contributors": 84,
  "created_at": "2016-04-08T14:15:12Z",
  "forks": 232,
@@ -411,7 +412,7 @@
    "forks": 34,
    "languages": [],
    "name": "windows-dev-guide",
-   "stars": 412,
+   "stars": 413,
    "url": "https://github.com/Vets-Who-Code/windows-dev-guide"
   },
   {
@@ -431,9 +432,9 @@
    "url": "https://github.com/Vets-Who-Code/vetswhocode-vs-code-theme"
   }
  ],
- "prs_merged": 1199,
+ "prs_merged": 1201,
  "repos_public": 56,
- "stars": 883,
- "streak_current": 0,
+ "stars": 884,
+ "streak_current": 1,
  "streak_longest": 12
 }
