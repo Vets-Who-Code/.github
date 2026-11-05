@@ -368,19 +368,20 @@
   "2026-11-01": 2,
   "2026-11-02": 0,
   "2026-11-03": 2,
-  "2026-11-04": 0
+  "2026-11-04": 0,
+  "2026-11-05": 0
  },
  "contributions_all_time": 422,
  "contributions_this_year": 390,
  "contributors": 84,
  "created_at": "2016-04-08T14:15:12Z",
- "forks": 233,
+ "forks": 234,
  "login": "Vets-Who-Code",
  "name": "#VetsWhoCode",
  "ops": [
   {
    "description": "The TypeScript/Next.js platform behind vetswhocode.io and the accelerator.",
-   "forks": 81,
+   "forks": 82,
    "languages": [
     "TypeScript",
     "CSS",
@@ -403,7 +404,7 @@
   },
   {
    "description": "The on-ramp every prospective VWC troop completes.",
-   "forks": 51,
+   "forks": 52,
    "languages": [],
    "name": "Prework",
    "stars": 153,
@@ -419,7 +420,7 @@
   },
   {
    "description": "Free APIs for troops to play with while learning JavaScript.",
-   "forks": 47,
+   "forks": 46,
    "languages": [],
    "name": "api-list",
    "stars": 204,
@@ -437,6 +438,6 @@
  "prs_merged": 1203,
  "repos_public": 56,
  "stars": 887,
- "streak_current": 1,
+ "streak_current": 0,
  "streak_longest": 12
 }
