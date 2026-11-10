@@ -1,6 +1,7 @@
 {
  "active_repos": [
   "Prework",
+  "ai-era-job-kit",
   "hashflag-skills",
   "vets-who-code-app",
   "vets-who-code-doc-templates",
@@ -366,10 +367,11 @@
   "2026-11-06": 0,
   "2026-11-07": 0,
   "2026-11-08": 0,
-  "2026-11-09": 0
+  "2026-11-09": 3,
+  "2026-11-10": 0
  },
- "contributions_all_time": 417,
- "contributions_this_year": 390,
+ "contributions_all_time": 420,
+ "contributions_this_year": 393,
  "contributors": 84,
  "created_at": "2016-04-08T14:15:12Z",
  "forks": 235,
@@ -412,7 +414,7 @@
    "forks": 34,
    "languages": [],
    "name": "windows-dev-guide",
-   "stars": 415,
+   "stars": 417,
    "url": "https://github.com/Vets-Who-Code/windows-dev-guide"
   },
   {
@@ -432,9 +434,9 @@
    "url": "https://github.com/Vets-Who-Code/vetswhocode-vs-code-theme"
   }
  ],
- "prs_merged": 1203,
- "repos_public": 56,
- "stars": 888,
- "streak_current": 0,
+ "prs_merged": 1205,
+ "repos_public": 57,
+ "stars": 890,
+ "streak_current": 1,
  "streak_longest": 12
 }
