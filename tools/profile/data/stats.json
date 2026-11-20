@@ -370,19 +370,20 @@
   "2026-11-16": 0,
   "2026-11-17": 0,
   "2026-11-18": 0,
-  "2026-11-19": 0
+  "2026-11-19": 0,
+  "2026-11-20": 0
  },
  "contributions_all_time": 424,
  "contributions_this_year": 398,
  "contributors": 84,
  "created_at": "2016-04-08T14:15:12Z",
- "forks": 257,
+ "forks": 258,
  "login": "Vets-Who-Code",
  "name": "#VetsWhoCode",
  "ops": [
   {
    "description": "The TypeScript/Next.js platform behind vetswhocode.io and the accelerator.",
-   "forks": 83,
+   "forks": 84,
    "languages": [
     "TypeScript",
     "CSS",
@@ -408,7 +409,7 @@
    "forks": 52,
    "languages": [],
    "name": "Prework",
-   "stars": 153,
+   "stars": 154,
    "url": "https://github.com/Vets-Who-Code/Prework"
   },
   {
@@ -416,7 +417,7 @@
    "forks": 34,
    "languages": [],
    "name": "windows-dev-guide",
-   "stars": 417,
+   "stars": 416,
    "url": "https://github.com/Vets-Who-Code/windows-dev-guide"
   },
   {
@@ -438,7 +439,7 @@
  ],
  "prs_merged": 1205,
  "repos_public": 57,
- "stars": 959,
+ "stars": 960,
  "streak_current": 0,
  "streak_longest": 12
 }
